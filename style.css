@@ -1,0 +1,502 @@
+*{
+    margin: 0px;
+box-sizing: border-box;
+color: #fff;
+font-family:sans-serif;
+}
+
+html,body{
+min-height: 100%;
+min-width: 100%;
+}
+body::-webkit-scrollbar{
+    display: none;
+}
+#nav{
+    width: 100%;
+    height: 145px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap:45px;
+    padding-left: 130px;
+    font-size: 20px;
+    text-transform: uppercase;
+    font-weight: 500;
+    position: fixed;
+    z-index: 99;
+}
+ 
+#nav img{
+    height: 80px;
+}
+video{
+    height: 100%;
+width: 100%;
+object-fit: cover;
+z-index: -1;
+position: fixed;
+}
+#main{ 
+position: relative;
+background-color: rgba(0, 0, 0, .60);
+}
+#page1{
+height: 100vh;
+width: 100%;
+position: relative;
+display: flex;
+justify-content: center;
+align-items: center;
+flex-direction: column;
+text-align: center;
+
+}
+.icondiv{
+height: 170px;
+width:170px ;
+display: flex;
+justify-content: center;
+align-items: center;
+border-radius: 50%;
+justify-self: flex-end;
+align-self: flex-start;
+border: 2px solid #95c11E;
+position: relative;
+top: 15%;
+right: 2.6%;
+
+
+}
+#page1icon{ color: #fff;
+    font-size: 45px;
+
+}
+#page1 h1{
+font-size: 95px;
+margin-top: 60px;
+z-index: 10;
+font-weight: 900;
+position: relative;
+
+}
+#page1 h3{z-index: 10;
+
+    margin-top: 10px;
+    margin-bottom: 20px;
+    font-size: 30px;
+    font-weight: 800;
+}#page1 h5{z-index: 10;
+
+    width: 50%;
+    font-size: 20px;
+    font-weight: 400;
+}
+
+#page1 h1::before{
+
+top: -4px;
+left: -4px;
+-webkit-text-stroke: 2px #95c11E;
+
+    content:"  EAT. DRINK. PLAY.";
+    position: absolute;
+    color: black;
+z-index: -1;
+    
+}
+
+
+#page2{
+    min-height: 100vh;
+width: 100%;
+z-index: 10;
+
+}
+.cursor{
+    height: 20px;
+    width: 20px;
+    background-color: #95c11E;
+    border-radius: 50%;
+    position: fixed;
+    z-index: 99 ;
+}
+#cursor-blur{
+height: 400px;
+width:400px;
+background-color: #9bf44877;
+border-radius: 50%;
+position: fixed;
+filter: blur(50px);
+z-index: 10;
+}
+#scroller{
+    display: flex;
+    white-space:nowrap;
+    overflow-x: auto;
+    overflow-y: hidden;
+    position: relative;
+    z-index: 10;
+}
+#scroller::-webkit-scrollbar{
+display: none;
+}
+#scrolller-1{
+display: flex;
+white-space:nowrap;
+animation-name: scrooller;
+animation-duration: 30s;
+animation-timing-function: linear;
+animation-iteration-count: infinite;
+-webkit-text-stroke: 1px #fff;
+}
+
+
+#scroller h4{
+    font-size: 120px;
+color:#000;
+transition: all linear 0.1s;
+
+}
+
+#scroller h4:hover{
+color:#95c11E;
+
+}
+
+
+@keyframes scrooller{
+
+    from{
+        transform: translateX(0);
+    }
+to{
+    transform: translateX(-100%);
+
+
+}
+}
+
+
+#about-us{position: relative;
+    z-index: 11;
+    margin-top: 100px;
+    display: flex;
+    justify-content: space-between;
+}
+ #im1{
+height: 150px;
+width: 150px;
+border-radius: 3%;
+z-index: 11;
+
+margin-left: 100px;
+margin-top: 60px;
+}
+#about-us-con{
+width: 50%;
+z-index: 11;
+
+font-size: 25px;
+font-weight: 200;
+    text-align: center;
+}
+#about-us-con h1{
+font-size: 54px;
+font-weight: 800;
+padding-bottom: 35px;
+}
+ #im2{
+    border-radius: 3%;
+       height: 200px;
+    width: 165px;
+margin-right: 100px;
+}
+#about-us-con h5{
+    line-height: 40px;
+    font-weight: 100;
+}
+.card-container{
+height: 105vh;
+display: flex;
+justify-content: center;
+align-items: center;
+gap: 70px;
+position: relative;
+z-index: 10;
+}
+.card{
+    height: 80%;
+    width: 26%;
+    border-radius: 5%;
+    position:relative;
+    transition:all ease 2s;
+    
+}
+
+.card:hover{
+    
+}
+#card1{
+background-image: url(https://eiwgew27fhz.exactdn.com/wp-content/uploads/2023/02/home-toptracer.jpg?strip=all&lossy=1&sharp=1&ssl=1);
+background-size: cover;
+}
+
+#card2{
+    background-size: cover;
+
+    background-image: url(https://eiwgew27fhz.exactdn.com/wp-content/uploads/2023/02/hero-4.jpg?strip=all&lossy=1&sharp=1&ssl=1);
+}
+#card3{background-size: cover;
+
+    background-image: url(https://eiwgew27fhz.exactdn.com/wp-content/uploads/2023/02/hero-lessons.jpg?strip=all&lossy=1&sharp=1&ssl=1);
+}
+.overlays{    border-radius: 5%;
+
+    background-color: #95c11E;
+    height: 100%;   
+    width: 100%;
+    opacity: 0;
+    position: relative;
+padding:30px;
+}
+.overlays:hover{
+    opacity: 1;
+}
+.overlays h4{
+font-size: 40px;
+font-weight: 700;
+color: #000;
+padding-top: 135px;
+padding-bottom: 20px;
+}
+.overlays p{
+    font-size:25px ;
+    color: #000;
+    line-height: 30px;
+}
+.card:hover{
+transform: rotate3d(-1,1,.1,20deg)
+
+}
+.signup{
+    background: linear-gradient(to right top,#95c11E,green);
+    height: 45vh;
+    width: 100%;
+   display: flex;
+    justify-content: space-between;
+    position: relative;
+    z-index: 10;
+    text-align: center;
+}
+
+.signup h3{
+    width: 40%;
+    font-size: 30px;
+    font-weight: 800;
+    justify-self: center;
+    align-self: center;
+    color: #000;
+}
+#si1{
+    position: relative;
+}
+#si2{
+    position: relative;
+}
+.signup p{
+    display: flex;
+}
+.page3{
+height: 100vh;
+width: 100%;
+display: flex;
+justify-content: center;
+align-items: center;
+z-index: 10;
+position: relative;
+
+}
+.page3 p{
+    position: relative;
+    z-index: 10;
+    font-size: 35px;
+    font-weight: 900;
+    width: 55%;
+    line-height: 50px;
+}
+.page3 img{
+    height: 60px;
+    width: 60px;
+}
+#pimg1{
+position: relative;
+bottom: 225px;
+right: 90px;
+z-index: 10;
+
+}
+#pimg2{
+    position: relative;
+    top: 225px;
+    left: 80px;
+    z-index: 10;
+
+}
+.page4{
+    height: 50vh;
+    width: 100%;
+    display: flex;
+    gap: 40px;
+    justify-content: center;
+    align-items: center;}
+.elem{
+    overflow: hidden;
+    height: 165px;
+width:350px;
+border-radius: 3%;
+position: relative;
+z-index: 10;
+
+}
+
+.elem h4{
+    width: 100%;
+    height: 100%;
+    color: #000;
+    font-weight: 800;
+    background-color: #95c11E;
+    text-align: center;
+font-size: 35px;
+display: flex;
+position: absolute;
+align-items: center;
+justify-content: center;
+transition: all ease-in 0.5s;
+}
+
+.elem img{
+    height: 100%;
+    width: 100%; 
+    object-fit:fill;
+
+}
+
+.elem:hover h4{
+    background-color: transparent;
+    color:#fff;
+}
+.page4 h1{z-index: 10;
+font-size: 66px;
+font-weight: 900;
+position: absolute;
+top: 81.5%;
+-webkit-text-stroke: 1px  white;
+color: #000;
+}
+.footer{position: relative;
+    z-index: 10;
+    height: 50vh;
+    width: 100%;
+  display: flex;
+  background: linear-gradient(to right top,#95c11E,green);    
+}
+#f1{position: relative;
+    z-index: 10;
+    height: 100%;
+    width: 25%;
+    display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+        width: 25%;
+      background-image: url("https://eiwgew27fhz.exactdn.com/wp-content/themes/puttosaurus/img/dots-footer.svg");
+    }
+    #f1  img{
+        height: 100px;
+        margin-bottom:60px;
+        transition: all linear .3s;
+    }
+    i{
+        
+        font-size: 35px;
+        color: #000;
+    padding-right: 15px;
+}
+    
+
+#f2{position: relative;
+    z-index: 10;
+    height: 100%;
+    width: 25%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+#f2 h3{
+    font-size: 23px;
+font-weight: 900;
+color: #000;
+line-height: 40px;
+
+}
+#f3{position: relative;
+    z-index: 10;
+    height: 100%;
+    width: 25%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+#f3 h3{
+    font-size: 23px;
+font-weight: 900;
+color: #000;
+line-height: 40px;
+
+}#f4{position: relative;
+    z-index: 10;
+    height: 100%;
+    width: 25%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+#f4 h3{
+    font-size: 18px;
+font-weight: 900;
+color: #000;}
+#f4 p{
+    color: #000;
+line-height: 25px;
+font-weight: 700;
+}
+#f2h1:hover {
+    color: #fff;
+}
+#f2h2:hover {
+    color: #fff;
+}
+#f2h3:hover {
+    color: #fff;
+}
+
+#f3h1:hover {
+    color: #fff;
+}
+#f3h2:hover {
+    color: #fff;
+}
+#f3h3:hover {
+    color: #fff;
+}
+#f4h3:hover{
+    color: #fff;
+}
+#f1img:hover{
+    scale: .9;
+}
